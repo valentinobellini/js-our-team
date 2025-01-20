@@ -42,11 +42,25 @@ header p {
 }
 
 .card-text {
-    padding-left: 10px;
+    padding: 25px;
     color: white;
 }
 
 
 img {
     max-height: 150px;
+}
+
+.card-text h3{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.card-text p{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card-text p:nth-child(3) {
+    color: rgb(147, 211, 248);
 }
