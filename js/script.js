@@ -1,3 +1,4 @@
+//array di oggetti contenenti tutte le informazioni sui team mambers
 const teamMembers = [
   {
     name: "Marco Bianchi",
@@ -38,31 +39,41 @@ const teamMembers = [
 ];
 
  
-//selezione elemento uuput temporaneo
+//seleziona elemento ouput
 const listTeam = document.querySelector(".team-container");
 
-
-
+//inizializza la variabile per accumulare il markup html
 let items = ""
 
-// output temporaneo con li in ul 
+//cicla attraverso ogni membro del team
 for (let i = 0; i < teamMembers.length; i++) {
-  let membroIesimo = teamMembers[i];
+  let currenteMember = teamMembers[i];
 
-  items += generaTeamMember(membroIesimo);
+  items += createTeamMember(currenteMember);
 }
 
-
+//stampa html generato in pagina
 listTeam.innerHTML = items;
 
 
 
 
-//funzione per generare un team member
-function generaTeamMember(oggetto) {
-  //estrapoliamo i valori delle varie proprieta dell'oggetto con sintassi destrutturata
-  const { name, role, img } = oggetto;
 
+
+
+
+
+
+
+//FUNZIONI
+
+//funzione per generare un elemento team member
+function createTeamMember(memberObject) {
+
+  //estrapola i valori delle varie proprieta dell'oggetto con sintassi destrutturata
+  const { name, role, email, img } = memberObject;
+
+  //costruisci markup html per un team member
   let item = `
   <div class="team-card">
     <div class="card-image">
@@ -71,8 +82,11 @@ function generaTeamMember(oggetto) {
     <div class="card-text">
       <h3>${name}</h3>
       <p>${role}</p>
+      <p>${email}</p>
     </div>
   </div>
   `
+
+  //restituisci markup html generato
   return item
 }

@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 60px;
+    margin: 30px;
+    color: rgb(150, 47, 170);
+}
+
+header p {
+    font-size: 20px;
+    width: 85%;
+    text-align: center;
+}
+
+.team-container{
+    margin: auto;
+    width: 80%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+
+.team-card {
+    display: flex;
+    width: 450px;
+    background-color: black;
+}
+
+.card-text {
+    padding-left: 10px;
+    color: white;
+}
+
+
+img {
+    max-height: 150px;
+}
